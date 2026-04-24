@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khuyến Mãi Tháng 4 – 30Shine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:      #15397F;
+      --navy-dk:   #0B1F4A;
+      --navy-lt:   #E8EFF9;
+      --gold:      #F5C842;
+      --gold-dk:   #C99212;
+      --white:     #ffffff;
+      --text:      #1a1a2e;
+      --muted:     #6b7280;
+      --border:    #e5e7eb;
+      --bg:        #fafbfd;
+      --shadow:    0 4px 16px rgba(21,57,127,.08);
+      --radius:    14px;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ────── HEADER ────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--navy-dk), var(--navy));
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+    }
+
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      height: 30px;
+      width: auto;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 26px;
+      background: rgba(255,255,255,.22);
+      flex-shrink: 0;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      opacity: .78;
+      font-weight: 500;
+      line-height: 1.35;
+      letter-spacing: .2px;
+      color: #fff;
+    }
+
+    .btn-book {
+      background: var(--gold);
+      color: var(--navy-dk);
+      font-weight: 700;
+      font-size: 12.5px;
+      padding: 9px 16px;
+      border-radius: 24px;
+      text-decoration: none;
+      letter-spacing: .2px;
+      white-space: nowrap;
+      transition: .2s;
+    }
+
+    .btn-book:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(245,200,66,.5);
+    }
+
+    @media (max-width: 480px) {
+      .brand-logo { height: 26px; }
+      .brand-divider { height: 22px; }
+      .brand-sub { font-size: 10px; }
+    }
+
+    /* ────── HERO ────── */
+    .hero {
+      background: linear-gradient(160deg, #C8102E 0%, #8B0000 50%, var(--navy) 100%);
+      padding: 64px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(245,200,66,.25), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(21,57,127,.4), transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-content { position: relative; z-index: 1; }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dk);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      color: rgba(255,255,255,.85);
+      font-size: 16px;
+      margin-bottom: 34px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dk);
+      font-weight: 800;
+      font-size: 16px;
+      padding: 14px 42px;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(245,200,66,.45);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(245,200,66,.55);
+    }
+
+    /* ────── PROMO STRIP ────── */
+    .promo-strip {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 11px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .2px;
+    }
+
+    /* ────── MAIN ────── */
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 52px 20px 64px;
+    }
+
+    /* ────── SECTION TITLE ────── */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 900;
+      color: var(--navy-dk);
+      display: inline-block;
+      padding-bottom: 12px;
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* ────── SEARCH ────── */
+    .search-wrap {
+      max-width: 620px;
+      margin: 20px auto 0;
+      position: relative;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--muted);
+      stroke-width: 2;
+      stroke-linecap: round;
+      pointer-events: none;
+    }
+
+    #salon-search {
+      width: 100%;
+      padding: 13px 16px 13px 46px;
+      border: 2px solid var(--navy);
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: box-shadow .2s, border-color .2s;
+    }
+
+    #salon-search::placeholder { color: #adb5bd; }
+
+    #salon-search:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 4px rgba(21,57,127,.12);
+    }
+
+    .no-result {
+      display: none;
+      text-align: center;
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ────── SALON LIST ────── */
+    .region { margin-bottom: 42px; }
+
+    .region-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .region-header h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--navy-dk);
+    }
+
+    .region-count {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 12px;
+    }
+
+    .salon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 10px;
+    }
+
+    .salon-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 11px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .salon-item:hover {
+      border-color: var(--navy);
+      box-shadow: var(--shadow);
+      background: var(--navy-lt);
+    }
+
+    .salon-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .salon-info { flex: 1; }
+
+    .salon-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy-dk);
+      display: block;
+      line-height: 1.3;
+    }
+
+    .salon-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11.5px;
+      color: var(--navy);
+      margin-top: 3px;
+      font-weight: 600;
+    }
+
+    .salon-map svg {
+      width: 11px;
+      height: 11px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .badge-check {
+      display: inline-block;
+      font-size: 10px;
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      padding: 1px 5px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* ────── FOOTER ────── */
+    footer {
+      background: var(--navy-dk);
+      color: rgba(255,255,255,.7);
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 24px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 36px;
+    }
+
+    .footer-brand .ft-logo {
+      height: 28px;
+      width: auto;
+      margin-bottom: 12px;
+      display: block;
+      opacity: .92;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(255,255,255,.55);
+      margin-top: 8px;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+
+    .footer-col ul { list-style: none; }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .footer-col ul li a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover { color: var(--white); }
+
+    .footer-hotline {
+      color: var(--gold) !important;
+      font-size: 19px !important;
+      font-weight: 800;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 12px;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ────── RESPONSIVE ────── */
+    @media (max-width: 720px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+      .salon-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <nav>
+    <div class="brand">
+      <img src="https://30shine-salon.github.io/ctkm-t4-30shine/logo-30shine-white.png" alt="30Shine" class="brand-logo">
+      <div class="brand-divider"></div>
+      <div class="brand-sub">Chuỗi tóc nam<br>hàng đầu Việt Nam</div>
+    </div>
+    <a href="https://30shine.com/booking?phone=&salonId=0&step=0" class="btn-book" target="_blank" rel="noopener">Đặt lịch ngay</a>
+  </nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">Khuyến mãi · 24/4 – 3/5/2026</span>
+    <h1>Ưu Đãi Đặc Biệt<br><span>Dịp Đại Lễ 30/4</span></h1>
+    <p class="hero-sub">Áp dụng tại 60 Salon trên toàn quốc</p>
+    <a href="https://30shine.com/booking?phone=&salonId=0&step=0" class="hero-cta" target="_blank" rel="noopener">Đặt lịch ngay</a>
+  </div>
+</section>
+
+<!-- ══ PROMO STRIP ══ -->
+<div class="promo-strip">
+  📍 Áp dụng 24/4 – 3/5/2026 &nbsp;·&nbsp; 60 Salon toàn quốc &nbsp;·&nbsp; Hotline: 1900 27 27 03
+</div>
+
+<!-- ══ MAIN ══ -->
+<main id="salon-list">
+
+  <div class="section-title">
+    <h2>Danh Sách Salon Áp Dụng</h2>
+    <p>60 salon tham gia chương trình khuyến mãi · Click để xem bản đồ Google Maps</p>
+  </div>
+
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+    <input id="salon-search" type="search" placeholder="Tìm salon theo tên đường, phường, quận..." autocomplete="off">
+  </div>
+
+  <p class="no-result" id="no-result">Không tìm thấy salon phù hợp.</p>
+
+  <!-- ── Hà Nội (19) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Hà Nội</h3>
+      <span class="region-count">19 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=9654691446043123051" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info">
+          <span class="salon-name">346 Khâm Thiên, P. Thổ Quan, Q. Đống Đa</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=3196037762510980095" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info">
+          <span class="salon-name">382 Nguyễn Trãi, P. Thanh Xuân Trung, Q. Thanh Xuân</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=15938916460167482042" target="_blank" rel="noopener">
+        <span class="salon-num">3</span>
+        <span class="salon-info">
+          <span class="salon-name">151 Cầu Giấy, Q. Cầu Giấy</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=11708971892462977378" target="_blank" rel="noopener">
+        <span class="salon-num">4</span>
+        <span class="salon-info">
+          <span class="salon-name">10 Trần Phú, P. Mộ Lao, Q. Hà Đông</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=16804028167284277452" target="_blank" rel="noopener">
+        <span class="salon-num">5</span>
+        <span class="salon-info">
+          <span class="salon-name">168 Nguyễn Văn Cừ, Q. Long Biên</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=1900366656091706328" target="_blank" rel="noopener">
+        <span class="salon-num">6</span>
+        <span class="salon-info">
+          <span class="salon-name">109 Trần Quốc Hoàn, Q. Cầu Giấy</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=18382456324611580252" target="_blank" rel="noopener">
+        <span class="salon-num">7</span>
+        <span class="salon-info">
+          <span class="salon-name">Tầng 2 Chelsea Park, 116 Trung Kính, P. Yên Hòa, Q. Cầu Giấy</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=10868531561918163495" target="_blank" rel="noopener">
+        <span class="salon-num">8</span>
+        <span class="salon-info">
+          <span class="salon-name">264 Lạc Long Quân, P. Bưởi, Q. Tây Hồ</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=647061254275736071" target="_blank" rel="noopener">
+        <span class="salon-num">9</span>
+        <span class="salon-info">
+          <span class="salon-name">90 Nguyễn Hoàng, P. Mỹ Đình, Q. Nam Từ Liêm</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=139307085831225466" target="_blank" rel="noopener">
+        <span class="salon-num">10</span>
+        <span class="salon-info">
+          <span class="salon-name">202 Đội Cấn, P. Đội Cấn, Q. Ba Đình</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=6324223802590367683" target="_blank" rel="noopener">
+        <span class="salon-num">11</span>
+        <span class="salon-info">
+          <span class="salon-name">65 Cầu Diễn, P. Phúc Diễn, Q. Bắc Từ Liêm</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.app.goo.gl/2g4dQ4vxz11sVGv79" target="_blank" rel="noopener">
+        <span class="salon-num">12</span>
+        <span class="salon-info">
+          <span class="salon-name">39 Hai Bà Trưng, P. Trần Hưng Đạo, Q. Hoàn Kiếm</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=18320535310939341862" target="_blank" rel="noopener">
+        <span class="salon-num">13</span>
+        <span class="salon-info">
+          <span class="salon-name">148B Trương Định, P. Bạch Mai, Q. Hai Bà Trưng</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=952123855585915282" target="_blank" rel="noopener">
+        <span class="salon-num">14</span>
+        <span class="salon-info">
+          <span class="salon-name">62 Láng Hạ, P. Láng Hạ, Q. Đống Đa</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=15318611735238697129" target="_blank" rel="noopener">
+        <span class="salon-num">15</span>
+        <span class="salon-info">
+          <span class="salon-name">186 Quang Trung, P. Quang Trung, Q. Hà Đông</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=18014788548328798804" target="_blank" rel="noopener">
+        <span class="salon-num">16</span>
+        <span class="salon-info">
+          <span class="salon-name">11 Phan Kế Toại, KĐT An Hưng, Q. Hà Đông</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=5271566231884132590" target="_blank" rel="noopener">
+        <span class="salon-num">17</span>
+        <span class="salon-info">
+          <span class="salon-name">Khu A TTTM TSQ, 55 Nguyễn Văn Lộc, P. Mộ Lao, Q. Hà Đông</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=15850135549363110175" target="_blank" rel="noopener">
+        <span class="salon-num">18</span>
+        <span class="salon-info">
+          <span class="salon-name">173 Thanh Nhàn, P. Thanh Nhàn, Q. Hai Bà Trưng</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+      <a class="salon-item" href="https://maps.app.goo.gl/NE3V63h2KiNPpfH98" target="_blank" rel="noopener">
+        <span class="salon-num">19</span>
+        <span class="salon-info">
+          <span class="salon-name">50BT4 X2 Nguyễn Phan Chánh (Linh Đàm), P. Hoàng Liệt, Q. Hoàng Mai</span>
+          <span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── TP. Hồ Chí Minh (24) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>TP. Hồ Chí Minh</h3>
+      <span class="region-count">24 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=1845547916514553023" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">186 Đinh Tiên Hoàng, P. Đa Kao, Q. 1</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=16838498228926911422" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">103 Trần Não, P. Bình An, Q. 2</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=973614265779103677" target="_blank" rel="noopener">
+        <span class="salon-num">3</span>
+        <span class="salon-info"><span class="salon-name">401/1 Nguyễn Duy Trinh, P. Thạnh Mỹ Lợi, Q. 2</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=1167718132643996942" target="_blank" rel="noopener">
+        <span class="salon-num">4</span>
+        <span class="salon-info"><span class="salon-name">25 Tôn Đản, P. 13, Q. 4</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=12866810831959166078" target="_blank" rel="noopener">
+        <span class="salon-num">5</span>
+        <span class="salon-info"><span class="salon-name">8 Châu Văn Liêm, P. 10, Q. 5</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=14289334433820279951" target="_blank" rel="noopener">
+        <span class="salon-num">6</span>
+        <span class="salon-info"><span class="salon-name">927 Hậu Giang, P. 11, Q. 6</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=3761060271618725937" target="_blank" rel="noopener">
+        <span class="salon-num">7</span>
+        <span class="salon-info"><span class="salon-name">237 Nguyễn Thị Thập, Q. 7</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=2462159708998685479" target="_blank" rel="noopener">
+        <span class="salon-num">8</span>
+        <span class="salon-info"><span class="salon-name">420 Huỳnh Tấn Phát, Q. 7</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=786639193523183105" target="_blank" rel="noopener">
+        <span class="salon-num">9</span>
+        <span class="salon-info"><span class="salon-name">236 Dương Bá Trạc, P. 1, Q. 8</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=13428150292839380572" target="_blank" rel="noopener">
+        <span class="salon-num">10</span>
+        <span class="salon-info"><span class="salon-name">145 Tô Hiến Thành, P. 13, Q. 10</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=11586448080292016568" target="_blank" rel="noopener">
+        <span class="salon-num">11</span>
+        <span class="salon-info"><span class="salon-name">32 Nguyễn Ảnh Thủ, P. Hiệp Thành, Q. 12</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=8905912173145920283" target="_blank" rel="noopener">
+        <span class="salon-num">12</span>
+        <span class="salon-info"><span class="salon-name">76 Phan Văn Hớn, P. Tân Thới Nhất, Q. 12</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=17741874226307993864" target="_blank" rel="noopener">
+        <span class="salon-num">13</span>
+        <span class="salon-info"><span class="salon-name">312 Lê Văn Sỹ, P. 1, Q. Tân Bình</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=4664388622907670061" target="_blank" rel="noopener">
+        <span class="salon-num">14</span>
+        <span class="salon-info"><span class="salon-name">575 Âu Cơ, P. 14, Q. Tân Bình</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.app.goo.gl/y4hGwJCFuEBoJA9W6" target="_blank" rel="noopener">
+        <span class="salon-num">15</span>
+        <span class="salon-info"><span class="salon-name">190 Hòa Bình, P. Hiệp Tân, Q. Tân Phú</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=6353772996147985108" target="_blank" rel="noopener">
+        <span class="salon-num">16</span>
+        <span class="salon-info"><span class="salon-name">1180 Quang Trung, Q. Gò Vấp</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=706157933688221434" target="_blank" rel="noopener">
+        <span class="salon-num">17</span>
+        <span class="salon-info"><span class="salon-name">12 Lê Đức Thọ, P. 7, Q. Gò Vấp</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=5525883888364973360" target="_blank" rel="noopener">
+        <span class="salon-num">18</span>
+        <span class="salon-info"><span class="salon-name">483 Thống Nhất, P. 16, Q. Gò Vấp</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=16487571182036222024" target="_blank" rel="noopener">
+        <span class="salon-num">19</span>
+        <span class="salon-info"><span class="salon-name">341 Xô Viết Nghệ Tĩnh, P. 25, Q. Bình Thạnh</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=1929733954964268449" target="_blank" rel="noopener">
+        <span class="salon-num">20</span>
+        <span class="salon-info"><span class="salon-name">708 Lê Trọng Tấn, Q. Bình Tân</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=11461651743351549361" target="_blank" rel="noopener">
+        <span class="salon-num">21</span>
+        <span class="salon-info"><span class="salon-name">730 Tỉnh lộ 10, Q. Bình Tân</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=8218427059358100292" target="_blank" rel="noopener">
+        <span class="salon-num">22</span>
+        <span class="salon-info"><span class="salon-name">29 Hiệp Bình, Q. Thủ Đức</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=10316098560035153606" target="_blank" rel="noopener">
+        <span class="salon-num">23</span>
+        <span class="salon-info"><span class="salon-name">1146 Kha Vạn Cân, P. Linh Chiểu, Q. Thủ Đức</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=18392680015952715206" target="_blank" rel="noopener">
+        <span class="salon-num">24</span>
+        <span class="salon-info"><span class="salon-name">99 Tân Sơn Nhì, P. Tân Sơn Nhì, Q. Tân Phú</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Thanh Hóa (4) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Thanh Hóa</h3>
+      <span class="region-count">4 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=12935241603661774909" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">304 Nguyễn Trãi, P. Tân Sơn, TP. Thanh Hóa</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=14254705748661183510" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">290 Quang Trung, P. Đông Vệ, TP. Thanh Hóa</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=571081655286394675" target="_blank" rel="noopener">
+        <span class="salon-num">3</span>
+        <span class="salon-info"><span class="salon-name">80 Trần Phú, P. Điện Biên, TP. Thanh Hóa</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=7101073236898975905" target="_blank" rel="noopener">
+        <span class="salon-num">4</span>
+        <span class="salon-info"><span class="salon-name">595 Bà Triệu, P. Đông Thọ, TP. Thanh Hóa</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Bình Dương (3) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Bình Dương</h3>
+      <span class="region-count">3 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=14417702058603677669" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">80 Phú Lợi, TP. Thủ Dầu Một, Bình Dương</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=12623994511248791883" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">255 Nguyễn An Ninh, TP. Thủ Dầu Một, Bình Dương</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=15794630992464969650" target="_blank" rel="noopener">
+        <span class="salon-num">3</span>
+        <span class="salon-info"><span class="salon-name">36 đường N1, KCN Mỹ Phước 1, Bến Cát, Bình Dương</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Nghệ An (2) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Nghệ An</h3>
+      <span class="region-count">2 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=3196331650092552964" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">58 Nguyễn Văn Cừ, P. Hưng Bình, TP. Vinh, Nghệ An</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=9449230059360748618" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">68 Lê Nin, P. Hà Huy Tập, TP. Vinh, Nghệ An</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Bắc Ninh (2) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Bắc Ninh</h3>
+      <span class="region-count">2 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=5983455761842440302" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">4 Lê Quang Đạo, Đông Ngàn, Từ Sơn, Bắc Ninh</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=5513480843438489452" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">362 Ngô Gia Tự, P. Tiền An, TP. Bắc Ninh</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Đồng Nai (2) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Đồng Nai</h3>
+      <span class="region-count">2 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=7397825665118735516" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">451 Phạm Văn Thuận, TP. Biên Hòa, Đồng Nai</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=10682433222614590087" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">1371 Phạm Văn Thuận, P. Thống Nhất, TP. Biên Hòa, Đồng Nai</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── Các tỉnh khác (3) ── -->
+  <div class="region">
+    <div class="region-header">
+      <h3>Các tỉnh khác</h3>
+      <span class="region-count">3 salon</span>
+    </div>
+    <div class="salon-grid">
+      <a class="salon-item" href="https://maps.google.com/maps?cid=592847040915135628" target="_blank" rel="noopener">
+        <span class="salon-num">1</span>
+        <span class="salon-info"><span class="salon-name">363 Lương Ngọc Quyến, P. Hoàng Văn Thụ, TP. Thái Nguyên</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=16163604535556094937" target="_blank" rel="noopener">
+        <span class="salon-num">2</span>
+        <span class="salon-info"><span class="salon-name">113 Trần Hưng Đạo, P. Mỹ Bình, TP. Long Xuyên, An Giang</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=11254043314643647239" target="_blank" rel="noopener">
+        <span class="salon-num">3</span>
+        <span class="salon-info"><span class="salon-name">7 Đỗ Tường Phong, TP. Tân An, Long An</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+      <a class="salon-item" href="https://maps.google.com/maps?cid=12140185597435162106" target="_blank" rel="noopener">
+        <span class="salon-num">4</span>
+        <span class="salon-info"><span class="salon-name">Time Garden 25/4</span><span class="salon-map"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Xem bản đồ</span></span>
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <img src="https://30shine-salon.github.io/ctkm-t4-30shine/logo-30shine-white.png" alt="30Shine" class="ft-logo">
+      <p>Chuỗi tóc nam hàng đầu Việt Nam.<br>Phong cách – Chuyên nghiệp – Tận tâm.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Liên hệ</h4>
+      <ul>
+        <li><a href="tel:19002727032" class="footer-hotline">1900 27 27 03</a></li>
+        <li>Thứ 2 – Chủ nhật</li>
+        <li>8:30 – 20:30</li>
+        <li><a href="https://30shine.com" target="_blank">30shine.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Khuyến mãi</h4>
+      <ul>
+        <li>Áp dụng: 24/4 – 3/5/2026</li>
+        <li>60 salon toàn quốc</li>
+        <li><a href="#salon-list">Xem danh sách salon</a></li>
+        <li><a href="https://30shine.com/booking?phone=&salonId=0&step=0" target="_blank" rel="noopener">Đặt lịch ngay</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2026 30Shine. Chuỗi tóc nam hàng đầu Việt Nam.
+  </div>
+</footer>
+
+<script>
+  const input = document.getElementById('salon-search');
+  const noResult = document.getElementById('no-result');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    const regions = document.querySelectorAll('.region');
+    let totalVisible = 0;
+
+    regions.forEach(region => {
+      const items = region.querySelectorAll('.salon-item');
+      let regionVisible = 0;
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const match = !q || text.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) regionVisible++;
+      });
+
+      region.style.display = regionVisible > 0 ? '' : 'none';
+      totalVisible += regionVisible;
+    });
+
+    noResult.style.display = totalVisible === 0 ? 'block' : 'none';
+  });
+</script>
+</body>
+</html>
